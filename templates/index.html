@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashim Nepal | Gym Exercise Recommendation Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logoNewNobg.png') }}">
+</head>
+<body>
+    <h1>Gym Exercise Recommendation Application | <a href="https://ashimnepal.com.np" target="_blank">Ashim Nepal</a></h1>
+
+      You can see the inputs details and with suitable values to include in each fields and do the predictions.<br><br>
+    <a id="openDialog">Click here to understand input values real quick.</a>
+    <form action="/recommend" method="post">
+         <label for="Type">Type</label>
+{#        <input type="text" class="form-control" id="Type" name="Type" required>#}
+        <select name="Type" id="Type" required>
+            <option value="" disabled selected>---Select Type---</option>
+            <option value="0">Cardio</option>
+            <option value="1">Olympic Weightlifting</option>
+            <option value="2">Plyometrics</option>
+            <option value="3">Powerlifting</option>
+            <option value="4">Strength</option>
+            <option value="5">Stretching</option>
+            <option value="6">Strongman</option>
+        </select>
+
+        <br><br>
+
+        <label for="BodyPart">Body Part</label>
+{#        <input type="text" class="form-control" id="BodyPart" name="BodyPart" required>#}
+        <select name="BodyPart" id="BodyPart" required>
+            <option value="" disabled selected>---Select Body Part---</option>
+            <option value="0">Abdominals</option>
+            <option value="1">Abductors</option>
+            <option value="2">Adductors</option>
+            <option value="3">Biceps</option>
+            <option value="4">Calves</option>
+            <option value="5">Chest</option>
+            <option value="6">Forearms</option>
+            <option value="7">Glutes</option>
+            <option value="8">Hamstrings</option>
+            <option value="9">Lats</option>
+            <option value="10">Lower Back</option>
+            <option value="11">Middle Back</option>
+            <option value="12">Neck</option>
+            <option value="13">Quadriceps</option>
+            <option value="14">Shoulders</option>
+            <option value="15">Traps</option>
+            <option value="16">Triceps</option>
+        </select>
+
+        <br>
+
+        <label for="Level">Level</label>
+{#        <input type="text" class="form-control" id="Level" name="Level" required>#}
+        <select name="Level" id="Level" required>
+            <option value="" disabled selected>---Select Level---</option>
+            <option value="0">Beginner</option>
+            <option value="1">Intermediate</option>
+            <option value="2">Expert</option>
+        </select>
+
+        <br><br>
+
+        <label for="Equipment">Equipment</label>
+{#        <input type="text" class="form-control" id="Equipment" name="Equipment" required>#}
+        <select name="Equipment" id="Equipment" required>
+            <option value="" disabled selected>---Select Equipment---</option>
+            <option value="0">Bands</option>
+            <option value="1">Barbell</option>
+            <option value="2">Body Only</option>
+            <option value="3">Cable</option>
+            <option value="4">Data Unavailable</option>
+            <option value="5">Dumbbell</option>
+            <option value="6">E-Z Curl Bar</option>
+            <option value="7">Exercise Ball</option>
+            <option value="8">Foam Roll</option>
+            <option value="9">Kettlebells</option>
+            <option value="10">Machine</option>
+            <option value="11">Medicine Ball</option>
+            <option value="12">Other</option>
+        </select>
+
+        <br><br>
+
+        <br><br>
+        <input type="submit" value="Recommend"></input>
+         <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close-btn" id="closeDialogBtn">&times;</span>
+            <h2>Gym Exercises Recommendation Inputs in Short</h2>
+            Provided following are the details to make Recommendations:
+            <ul>
+                <li><strong>Type:</strong> The category of the exercise, such as Cardio, Strength, or Stretching.</li><br>
+                <li><strong>Body Part:</strong> The primary muscle group targeted by the exercise, such as Abdominals, Biceps, or Chest.</li><br>
+                <li><strong>Level:</strong> The difficulty level of the exercise, such as Beginner, Intermediate, or Expert.</li><br>
+                <li><strong>Equipment:</strong> The equipment required for the exercise, such as Dumbbell, Barbell, or Body Only.</li><br>
+            </ul>
+        </div>
+    </div>
+    </form>
+<br>
+    <br>
+    <br>
+    <hr>
+    <p>Recommendation Model Application<br><br>KRB-03 by <b><a href="https://ashimnepal.com.np" target="_blank">Ashim Nepal</a></b>, 07-2024</p>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var openDialog = document.getElementById("openDialog");
+    var dialog = document.getElementById("dialog");
+    var closeDialogBtn = document.getElementById("closeDialogBtn");
+    openDialog.onclick = function() {
+        dialog.style.display = "block";
+    };
+    closeDialogBtn.onclick = function() {
+        dialog.style.display = "none";
+    };
+    window.onclick = function(event) {
+        if (event.target === dialog) {
+            dialog.style.display = "none";
+        }
+    };
+});
+</script>
+</body>
+</html>
