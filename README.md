@@ -3,7 +3,7 @@
 
 This Repository consists of the files that I have used in creating the web application that recommends the Gym Exercises on the basis of body part and equipment selected by the user. You are Free to take and use these projects as per your understanding need. Enjoy your tour to my Recommendation Application🌾!!
 
-You can Access the application by clicking the link here: [Application](https://gym-recommendation-application.onrender.com/)
+You can Access the application by clicking the link here: [Application](https://gym-recommendation-app.onrender.com/)
 
 ! Please Note that, the site might take a while to load as its the free hosting and the requests and respond in the server are limited(It works Definitely). Thank You!
 
@@ -83,7 +83,7 @@ V. SELECTING A EXERCISE TO SEE TUTORIAL IN YOUTUBE
 ![app-4](https://raw.githubusercontent.com/ashim-nepal/Gym-Recommendation-App/main/application-screenshots/Screenshot%202024-08-10%20213642.png)
 
 
-Thats the Gym Recommendation Application, you can give it a shot by clicking the link here, [Application](https://gym-recommendation-application.onrender.com/)
+Thats the Gym Recommendation Application, you can give it a shot by clicking the link here, [Application](https://gym-recommendation-app.onrender.com/)
 
 Please Note that, the site might take a while to load as its the free hosting and the requests and respond in the server are limited(It will work Definitely). Thank You!
 
